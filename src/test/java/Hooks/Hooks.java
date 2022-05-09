@@ -19,7 +19,7 @@ public class Hooks {
 
     public static RequestSpecification spec;
 
-    @Before( value = "@ApiRegistrant")
+    @Before( value = "@US_15_Api_test")
     public void setup(){
 
         spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();

@@ -16,7 +16,10 @@ public class RegistrationPage {
     public WebElement registrationText;
 
     @FindBy(id ="ssn")
-    public WebElement ssnTextbox;
+    public WebElement ssnTextbox; //*[@id="entity-menu"]/a/span
+
+    @FindBy(xpath = "//*[@id='entity-menu']/a/span")
+    public WebElement itemsTitleButton;
 
     @FindBy(xpath = "//div[text()='Your SSN is required.']")
     public WebElement ssnRequiredText;

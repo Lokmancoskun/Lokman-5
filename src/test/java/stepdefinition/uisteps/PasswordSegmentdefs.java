@@ -1,5 +1,6 @@
 package stepdefinition.uisteps;
 
+import Pojos.NewPatientCreation;
 import Pojos.Registrants;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
@@ -14,7 +15,7 @@ import utilities.ReusableMethods;
 
 import java.io.IOException;
 
-public class PasswordSegmentdefs {
+public class PasswordSegmentdefs  {
 
 
     Registrants registrant = new Registrants();//SAVE DATA AND REUSE DATA
@@ -22,6 +23,7 @@ public class PasswordSegmentdefs {
     Faker faker = new Faker();
     RegistrationPage rp = new RegistrationPage();//INITIALIZED WEBELEMENTS
     PasswordSegmentPage passwordSegmentPage = new PasswordSegmentPage();
+    NewPatientCreation newPatientCreation = new NewPatientCreation();
 
 
    public void setUp() {
@@ -54,9 +56,10 @@ public class PasswordSegmentdefs {
 
     }
      @Given("user clicks on remember button")
-        public void user_clicks_on_remember_button() {
+        public void user_clicks_on_remember_button()  {
          Driver.wait(1);
         signInPage.rememberMe.click();
+
 
     }
     @Given("user clicks on the signInButton")
@@ -72,7 +75,8 @@ public class PasswordSegmentdefs {
 //    }
     @Given("user clicks on user segment")
     public void user_clicks_on_user_segment() {
-        passwordSegmentPage.userSegment.click();
+
+       passwordSegmentPage.userSegment.click();
     }
 
     @Given("user clicks on Password")

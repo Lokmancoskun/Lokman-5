@@ -17,9 +17,11 @@ Feature: passwordsegment
     And user provides the invalid two letters one digit newPasswordConfirmation as "<newPasswordConfirmation>"
     And user clicks on the save button
     Then there should be displayed Your password is required to be at least four characters.
+
     Examples: user info
+
       |userName|passWord| currentPassword|newPassword|newPasswordConfirmation|
-      |sunu    |1234571|    1234571    |   LK1       |    LK1      |
+      |sunu    |1234571|    1234571   |   Lk1       |    Lk1      |
 
   Scenario Outline: user sees as password is required to be at least 4 characters
 
@@ -30,6 +32,7 @@ Feature: passwordsegment
     And user provides the invalid one capital letter one small letter one digit newPasswordConfirmation as "<newPasswordConfirmation>"
     And user clicks on the save button
     Then there should be displayed Your password is required to be at least four characters.
+
     Examples: user info
       |userName|passWord| currentPassword|newPassword|newPasswordConfirmation|
       |sunu    |1234571|    1234571   |   Lk1       |    Lk1      |
@@ -51,6 +54,7 @@ Feature: passwordsegment
     And user provides the invalid one capital letter one small letter one special char newPasswordConfirmation as "<newPasswordConfirmation>"
     And user clicks on the save button
     Then there should be displayed Your password is required to be at least four characters.
+
     Examples: user info
       |userName|passWord| currentPassword|newPassword|newPasswordConfirmation|
       |sunu    |1234571|   1234571    |   Lk!       |    Lk!      |
@@ -71,6 +75,7 @@ Feature: passwordsegment
     And user clicks on the save button
     Then user verifies password changed successfully
  #   Then user signs out
+
     Examples: user info
       |userName|passWord| currentPassword|newPassword|newPasswordConfirmation|
       |sunu    |1234571|   1234571   |  LKmn27!        |   LKmn27!         |
@@ -92,6 +97,7 @@ Feature: passwordsegment
     And user provides the all capital letters as newPasswordConfirmation as "<newPasswordConfirmation>"
     And user clicks on the save button
     Then there should be displayed Password changed.
+
     Examples: user info
       |userName|passWord| currentPassword|newPassword|newPasswordConfirmation|
       |sunu    |LKmn27! |  LKmn27!      |   LKMNCSK      |    LKMNCSK      |
@@ -113,6 +119,7 @@ Feature: passwordsegment
     And user provides the all digits as newPasswordConfirmation as "<newPasswordConfirmation>"
     And user clicks on the save button
     Then there should be displayed Password changed.
+
     Examples: user info
       |userName|passWord| currentPassword|newPassword|newPasswordConfirmation|
       |sunu    |LKMNCSK|    LKMNCSK  |   1234572      |    1234572      |

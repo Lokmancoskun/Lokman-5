@@ -110,6 +110,18 @@
             <artifactId>postgresql</artifactId>
             <version>42.2.8</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.rkonovalov</groupId>
+            <artifactId>comparator</artifactId>
+            <version>1.0.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.bremersee</groupId>
+            <artifactId>comparator</artifactId>
+            <version>3.1.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>

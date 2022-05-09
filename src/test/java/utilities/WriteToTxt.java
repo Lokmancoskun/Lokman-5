@@ -1,5 +1,6 @@
 package utilities;
 import Pojos.Appointment;
+import Pojos.NewPatientCreation;
 import Pojos.Registrants;
 
 import java.io.BufferedWriter;
@@ -49,6 +50,20 @@ public class WriteToTxt {
             for(int i=0; i< registrants.length;i++) {
                 writer.append(registrants[i].getFirstName()+","+ registrants[i].getLastName()+","+registrants[i].getSsn()+","+ registrants[i].getLogin()+
                         registrants[i].getSsn()+","+registrants[i].getEmail()+ "\n");
+            }
+            writer.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    public static void savePatientData(NewPatientCreation[] np){
+        try{
+            //src/resources/testdata/Registrantdata.txt
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("patients_records"), false);
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+            for(int i=0; i< np.length;i++) {
+                writer.append(np[i].getFirstname()+","+ np[i].getLastname()+","+np[i].getAddress()+","+np[i].getEmail()+
+                        np[i].getBloodGroup()+","+np[i].getPhone()+ "\n");
             }
             writer.close();
         }catch (Exception e){

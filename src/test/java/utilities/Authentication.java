@@ -18,7 +18,7 @@ public class Authentication {
         expectedData.put("password", "admin");
         expectedData.put("rememberMe","true" );
         //Send the Post request and get the data
-        Response response = given().spec(spec).contentType(ContentType.JSON).
+       Response response = given().spec(spec).contentType(ContentType.JSON).
                 body(expectedData).when().post("/{first}/{second}");
         response.prettyPrint();
         JsonPath json = response.jsonPath();
