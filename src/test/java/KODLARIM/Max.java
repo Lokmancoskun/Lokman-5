@@ -7,10 +7,12 @@ public class Max {
 
     public static void main(String[] args) {
 
+        //Finding max
 
         int arr[] = {90,20,30,40,50};
 
         int max= arr[0];
+
 
         for(int i=0; i<arr.length; i++){
 
@@ -26,7 +28,6 @@ public class Max {
        Arrays.sort(arr);
        System.out.println(Arrays.toString(arr));
 
-
     }
 
-            }
+    }

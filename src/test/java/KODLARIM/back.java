@@ -1,34 +1,46 @@
 package KODLARIM;
 
 import java.lang.constant.Constable;
+import java.util.Locale;
 
 public class back {
 
-
     public static void main(String[] args) {
 
-        reversedlast("Lokman");
-    }
+        //isimleri testen yazdirma
 
-    // 1. way
-
-//         String last = str.valueOf(str.charAt(str.length()-1));
-//         return last + str + last;
-
-    // 2.way
-    private static String reversedlast(String str) {
-
-        String last = str.substring(str.length() - 1);
-        System.out.println(last);
-
-           return last +str;
-
-
-            //        // 3.way
-//        char last = str.charAt(str.length()-1);
-//        return last + str + last;
-
-
-        }
+        stringreversed("Lokman");
+        reversedString("Ayse");
+        backToFront("Sungur");
+        back("Ridvan");
+        writingNameBack("Mustafa");
 
     }
+    public static void stringreversed(String str) {
+        String reverse = new StringBuffer(str).reverse().toString();
+        System.out.println(reverse);
+
+    }
+    public static void reversedString(String str){
+
+        String string = new StringBuilder(str).reverse().toString();
+        System.out.println(string);
+    }
+    public static void backToFront(String str1){
+
+        String str = new StringBuilder(str1).reverse().toString().toLowerCase(Locale.ROOT);
+        System.out.println(str);
+    }
+    public static void back(String str2){
+
+        String str = new StringBuilder(str2).reverse().toString().toUpperCase(Locale.ROOT);
+        System.out.println(str);
+    }
+    public static void writingNameBack(String str3){
+
+        String str = new StringBuilder(str3).reverse().toString();
+        System.out.println(str);
+
+    }
+}
+
